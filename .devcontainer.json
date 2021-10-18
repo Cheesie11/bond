@@ -1,0 +1,34 @@
+{
+  "name": "Node.js",
+  "dockerComposeFile": "./docker-compose.yml",
+  // Update the 'dockerComposeFile' list if you have more compose files or use different names.
+  "service": "nodedev",
+  // Default path to open when attaching to a new container.
+  "workspaceFolder": "/opt/code",
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "files.eol": "\n",
+    "telemetry.enableTelemetry": false,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "editor.formatOnSave": true,
+    "errorLens.onSave": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.useTabStops": false,
+    "editor.tabSize": 2,
+  },
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "nicoespeon.abracadabra",
+    "usernamehw.errorlens",
+    "pomber.git-file-history",
+    "mhutchie.git-graph",
+    "michelemelluso.gitignore",
+    "eamodio.gitlens",
+    "eg2.vscode-npm-script",
+    "humao.rest-client",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "mutantdino.resourcemonitor"
+  ]
+}
