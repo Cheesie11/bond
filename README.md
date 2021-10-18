@@ -1,8 +1,10 @@
 # Node.js Development Environment
 
 * Node.js with nodemon, eslint, dotenv, mocha, serve, .... for development.
+* [**MariaDB**](https://mariadb.org/) SQL database.
+* [**Adminer**](https://www.adminer.org/) for database administration.
 
-The Visual Studio Code [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension lets you use a Docker container as a full-featured development environment. It allows you to open any folder or repository inside a container and take advantage of Visual Studio Code's full feature set. The [`devcontainer.json`](./.devcontainer.json) file tells VS Code how to access (or create) the development container with well-defined tool and runtime stack.
+The Visual Studio Code [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension lets you use a Docker container as a full-featured development environment. It allows you to open any folder or repository inside a container and take advantage of Visual Studio Code's full feature set. The [`.devcontainer.json`](./.devcontainer.json) file tells VS Code how to access (or create) the development container with well-defined tool and runtime stack.
 
 **Since everything that has to do with the stack, only runs in the container, you have to put the commands into the corresponding container.**
 
