@@ -1,33 +1,27 @@
 
 # syntax=docker/dockerfile:1
 
-# Multi-stage Node image for frontend assets
-# - building: docker build --target builder -t NodeDEV:latest
-# - linting: docker build --target linting -t NodeDEV:latest
-# - serve: docker build --target serve -t NodeDEV:latest
-#
-# built for running/deployment
-# docker build -t NodeDEV:latest
-
-# Copies in our code and runs NPM Install
-# docker build --target builder -t NodeDEV:latest
 FROM node:lts-alpine AS base
 # smoke tests
 RUN echo "NodeJS Version:" "$(node -v)" && \
     echo "NPM Version:" "$(npm -v)"
 WORKDIR /opt/code
 COPY ./code/ .
-# set port from .env file
-# RUN npm config set port $NODE_PORT
+RUN npm config set port $NODE_PORT && \
+    npm config set unsafe-perm true && \
+    npm install -g nodemon && \
+    npm install -g mocha && \
+    npm install -g dotenv && \
+    npm install -g eslint
 # use a lightweight init system
 ADD https://github.com/Yelp/dumb-init/releases/download/v1.1.1/dumb-init_1.1.1_amd64 /usr/local/bin/dumb-init
 RUN chmod +x /usr/local/bin/dumb-init
 
 # Lints Code
-FROM base AS linting
-ENV NODE_ENV=development
-RUN npm install
-CMD ["dumb-init", "npm", "run", "lint"]
+# FROM base AS linting
+# ENV NODE_ENV=development
+# RUN npm install
+# CMD ["dumb-init", "npm", "run", "lint"]
 
 # Runs Unit Tests
 # docker build --target unit-tests -t NodeDEV:latest
