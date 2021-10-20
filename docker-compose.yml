@@ -30,7 +30,6 @@ services:
         build:
           context: .
           dockerfile: ./.docker/Dockerfile
-          target: ${ENVIRONMENT}
         container_name: "nodejs"
         restart: unless-stopped
         env_file: ./.env
