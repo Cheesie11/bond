@@ -20,6 +20,10 @@
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
     "nicoespeon.abracadabra",
+    "42Crunch.vscode-openapi",
+    "Arjun.swagger-viewer",
+    "formulahendry.code-runner",
+    "mikestead.dotenv",
     "usernamehw.errorlens",
     "pomber.git-file-history",
     "mhutchie.git-graph",
