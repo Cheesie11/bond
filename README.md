@@ -8,7 +8,9 @@ The Visual Studio Code [Remote - Containers](https://marketplace.visualstudio.co
 
 **The local folder `code` is mapped to `/opt/code` in the container**
 
-## Installed utilities
+## Installed npm modules
+
+Note: This node modules are installed globally.
 
 * [nodemon](https://www.npmjs.com/package/nodemon): a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
 * [eslint](https://www.npmjs.com/package/eslint) a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
