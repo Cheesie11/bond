@@ -1,19 +1,38 @@
 version: "3.3"
 
 services:
+
     nodejs:
         build:
           context: .
           dockerfile: ./.docker/Dockerfile
-        container_name: "nodejs"
         restart: unless-stopped
+        user: "node"
         env_file: ./.env
         environment:
           APP_NAME: ${APP_NAME}
           ENVIRONMENT: ${ENVIRONMENT}
         stdin_open: true # docker run -i
         tty: true        # docker run -t
+        depends_on:
+            - postgres
         ports:
-          - '${NODE_PORT}:${NODE_PORT}'
+            - '${NODE_PORT}:${NODE_PORT}'
         volumes:
-          - ./code:/opt/code/
+            - ./code:/opt/nodeDEV/code:cached
+
+    postgres:
+        image: postgres:9.6.2-alpine
+        env_file: ./.env
+        environment:
+            POSTGRES_USER: ${DATABASE_USERNAME}
+            POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+            POSTGRES_DB: ${APP_DATABASE}
+        ports:
+            - '${DATABASE_PORT}:5432'
+
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - '${ADMINER_PORT}:8080'
