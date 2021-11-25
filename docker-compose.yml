@@ -24,6 +24,7 @@ services:
     postgres:
         image: postgres:9.6.2-alpine
         env_file: ./.env
+        restart: unless-stopped
         environment:
             POSTGRES_USER: ${DATABASE_USERNAME}
             POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
@@ -33,6 +34,6 @@ services:
 
     adminer:
         image: adminer
-        restart: always
+        restart: unless-stopped
         ports:
             - '${ADMINER_PORT}:8080'
