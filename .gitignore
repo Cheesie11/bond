@@ -1,1 +1,21 @@
+
+# dotenv environment variables file
 .env
+
+# Dependency directories
+node_modules/
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# System Files
+.DS_Store
+Thumbs.db
