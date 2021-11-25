@@ -4,6 +4,8 @@
 
 The Visual Studio Code [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension lets you use a Docker container as a full-featured development environment. It allows you to open any folder or repository inside a container and take advantage of Visual Studio Code's full feature set. The [`.devcontainer.json`](./.devcontainer.json) file tells VS Code how to access (or create) the development container with well-defined tool and runtime stack.
 
+The Visual Studio Code [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension lets you use any remote machine with a SSH server as your development environment.
+
 **Since everything that has to do with the stack, only runs in the container, you have to put the commands into the corresponding container.**
 
 **The local folder `code` is mapped to `/opt/code` in the container**
@@ -16,6 +18,7 @@ Note: This node modules are installed globally.
 * [eslint](https://www.npmjs.com/package/eslint) a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
 * [dotenv](https://www.npmjs.com/package/dotenv): a module that loads environment variables from a `.env` file into `process.env`.
 * [mocha](https://www.npmjs.com/package/mocha): Simple, flexible, fun JavaScript test framework for Node.js
+* [supabase](https://www.npmjs.com/package/@supabase/supabase-js): An isomorphic Javascript client for Supabase.
 
 ## Installed vscode extensions
 
