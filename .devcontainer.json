@@ -2,9 +2,9 @@
   "name": "Node.js",
   "dockerComposeFile": "./docker-compose.yml",
   // Update the 'dockerComposeFile' list if you have more compose files or use different names.
-  "service": "nodedev",
+  "service": "M295",
   // Default path to open when attaching to a new container.
-  "workspaceFolder": "/opt/code",
+  "workspaceFolder": "/opt/nodeDEV/code",
   // Set *default* container specific settings.json values on container create.
   "settings": {
     "files.eol": "\n",
@@ -19,11 +19,13 @@
   },
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
+    "ms-azuretools.vscode-docker",
     "nicoespeon.abracadabra",
     "42Crunch.vscode-openapi",
     "Arjun.swagger-viewer",
     "formulahendry.code-runner",
     "mikestead.dotenv",
+    "redhat.vscode-yaml",
     "usernamehw.errorlens",
     "pomber.git-file-history",
     "mhutchie.git-graph",
