@@ -2,7 +2,7 @@
   "name": "Node.js",
   "dockerComposeFile": "./docker-compose.yml",
   // Update the 'dockerComposeFile' list if you have more compose files or use different names.
-  "service": "M295",
+  "service": "nodejs",
   // Default path to open when attaching to a new container.
   "workspaceFolder": "/opt/nodeDEV/code",
   // Set *default* container specific settings.json values on container create.
@@ -35,6 +35,8 @@
     "humao.rest-client",
     "christian-kohler.npm-intellisense",
     "christian-kohler.path-intellisense",
-    "mutantdino.resourcemonitor"
+    "mutantdino.resourcemonitor",
+    "bajdzis.vscode-database",
+    "dineug.vuerd-vscode"
   ]
 }
