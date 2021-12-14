@@ -39,3 +39,5 @@ Note: This node modules are installed globally.
 * [Resource Monitor](https://marketplace.visualstudio.com/items?itemName=mutantdino.resourcemonitor): Displays current CPU stats, memory/disk consumption, and battery percentage remaining.
 * [VS Code database](https://marketplace.visualstudio.com/items?itemName=bajdzis.vscode-database): Support mysql, postgres, SSL, socked - SQL database
 * [ERD Editor](https://marketplace.visualstudio.com/items?itemName=dineug.vuerd-vscode): vuerd Entity-Relationship Diagram Editor vscode extension
+* [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): Code formatter using prettier
+* [Prettier ESLint](https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint): Format JavaScript and TypeScript code using the prettier-eslint

@@ -37,6 +37,8 @@
     "christian-kohler.path-intellisense",
     "mutantdino.resourcemonitor",
     "bajdzis.vscode-database",
-    "dineug.vuerd-vscode"
+    "dineug.vuerd-vscode",
+    "rvest.vs-code-prettier-eslint",
+    "esbenp.prettier-vscode"
   ]
 }
