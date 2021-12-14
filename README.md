@@ -37,3 +37,5 @@ Note: This node modules are installed globally.
 * [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens): Supercharge the Git capabilities built into Visual Studio Code.
 * [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense): Visual Studio Code plugin that autocompletes filenames.
 * [Resource Monitor](https://marketplace.visualstudio.com/items?itemName=mutantdino.resourcemonitor): Displays current CPU stats, memory/disk consumption, and battery percentage remaining.
+* [VS Code database](https://marketplace.visualstudio.com/items?itemName=bajdzis.vscode-database): Support mysql, postgres, SSL, socked - SQL database
+* [ERD Editor](https://marketplace.visualstudio.com/items?itemName=dineug.vuerd-vscode): vuerd Entity-Relationship Diagram Editor vscode extension
