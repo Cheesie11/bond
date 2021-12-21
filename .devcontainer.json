@@ -43,6 +43,7 @@
     "dineug.vuerd-vscode",
     "rvest.vs-code-prettier-eslint",
     "esbenp.prettier-vscode",
-    "hbenl.vscode-test-explorer"
+    "hbenl.vscode-test-explorer",
+    "hbenl.vscode-mocha-test-adapter"
   ]
 }
