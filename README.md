@@ -41,3 +41,4 @@ Note: This node modules are installed globally.
 * [ERD Editor](https://marketplace.visualstudio.com/items?itemName=dineug.vuerd-vscode): vuerd Entity-Relationship Diagram Editor vscode extension
 * [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): Code formatter using prettier
 * [Prettier ESLint](https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint): Format JavaScript and TypeScript code using the prettier-eslint
+* [Test Explorer UI]([hbenl.vscode-test-explorer](https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer)): Run your tests in the Sidebar of Visual Studio Code

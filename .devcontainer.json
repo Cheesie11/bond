@@ -42,6 +42,7 @@
     "bajdzis.vscode-database",
     "dineug.vuerd-vscode",
     "rvest.vs-code-prettier-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "hbenl.vscode-test-explorer"
   ]
 }
