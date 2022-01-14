@@ -24,7 +24,6 @@
   "extensions": [
     "ms-azuretools.vscode-docker",
     "nicoespeon.abracadabra",
-    "42Crunch.vscode-openapi",
     "zoellner.openapi-preview",
     "Arjun.swagger-viewer",
     "formulahendry.code-runner",
