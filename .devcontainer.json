@@ -23,7 +23,6 @@
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
     "ms-azuretools.vscode-docker",
-    "nicoespeon.abracadabra",
     "zoellner.openapi-preview",
     "Arjun.swagger-viewer",
     "formulahendry.code-runner",
@@ -33,7 +32,6 @@
     "pomber.git-file-history",
     "mhutchie.git-graph",
     "michelemelluso.gitignore",
-    "eamodio.gitlens",
     "eg2.vscode-npm-script",
     "humao.rest-client",
     "christian-kohler.npm-intellisense",
@@ -42,8 +40,6 @@
     "bajdzis.vscode-database",
     "dineug.vuerd-vscode",
     "rvest.vs-code-prettier-eslint",
-    "esbenp.prettier-vscode",
-    "hbenl.vscode-test-explorer",
-    "hbenl.vscode-mocha-test-adapter"
+    "esbenp.prettier-vscode"
   ]
 }
