@@ -24,7 +24,6 @@ Note: This node modules are installed globally.
 
 * [npm](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script): npm support for VS Code.
 * [npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense): Visual Studio Code plugin that autocompletes npm modules in import statements.
-* [OpenAPI (Swagger) Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi): OpenAPI extension for Visual Studio Code.
 * [OpenAPI Preview](https://marketplace.visualstudio.com/items?itemName=zoellner.openapi-preview): Preview OpenAPI Docs
 * [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client): REST Client for Visual Studio Code.
 * [Swagger Viewer](https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer): Swagger Viewer lets you preview and validate Swagger 2.0 and OpenAPI files as you type in Visual Studio Code.

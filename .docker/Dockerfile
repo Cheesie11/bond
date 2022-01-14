@@ -17,7 +17,7 @@ RUN npm config set port $NODE_PORT && \
     npm config set unsafe-perm true && \
     npm install -g nodemon && \
     npm install -g mocha && \
-    npm install -g db-migrate && \
+    npm install -g db-migrate db-migrate-pg && \
     npm install -g dotenv && \
     npm install -g @supabase/supabase-js && \
     npm install -g eslint
