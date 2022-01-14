@@ -19,7 +19,7 @@ services:
         ports:
             - '${NODE_PORT}:${NODE_PORT}'
         volumes:
-            - ./code:/opt/nodeDEV/code:cached
+            - ./code:/opt/nodeDEV/code
 
     postgres:
         image: postgres:9.6.2-alpine
