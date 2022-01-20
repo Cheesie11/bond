@@ -19,6 +19,7 @@ RUN npm config set port $NODE_PORT && \
     npm install -g mocha && \
     npm install -g db-migrate db-migrate-pg && \
     npm install -g dotenv && \
+    npm install -g vue-cli && \
     npm install -g @supabase/supabase-js && \
     npm install -g eslint
 # smoke tests
