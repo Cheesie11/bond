@@ -1,6 +1,8 @@
 # Node.js Development Environment
 
-* Node.js with nodemon, eslint, dotenv, mocha, serve, .... for development.
+* [Node.js](https://nodejs.org/) with nodemon, eslint, dotenv, mocha, serve, .... for development.
+* [PostgreSQL](https://www.postgresql.org/) Database
+* [Adminer](https://www.adminer.org/) for database management
 
 The Visual Studio Code [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension lets you use a Docker container as a full-featured development environment. It allows you to open any folder or repository inside a container and take advantage of Visual Studio Code's full feature set. The [`.devcontainer.json`](./.devcontainer.json) file tells VS Code how to access (or create) the development container with well-defined tool and runtime stack.
 
@@ -8,7 +10,9 @@ The Visual Studio Code [Remote - SSH](https://marketplace.visualstudio.com/items
 
 **Since everything that has to do with the stack, only runs in the container, you have to put the commands into the corresponding container.**
 
-**The local folder `code` is mapped to `/opt/code` in the container**
+**The local folder `code` is mapped to `/opt/nodeDEV/code` in the container**
+
+**After cloning this repository you should rename `.env.example` to `.env` and adapt as needed**
 
 ## Installed npm modules
 
