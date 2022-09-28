@@ -1,0 +1,15 @@
+{
+  "task.allowAutomaticTasks": "on",
+  "files.eol": "\n",
+  "telemetry.enableTelemetry": false,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "editor.formatOnSave": true,
+  "errorLens.onSave": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.useTabStops": false,
+  "editor.tabSize": 2,
+  "eslint.run": "onSave",
+  "editor.renderWhitespace": "all",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
