@@ -2,7 +2,7 @@
   "name": "code",
   "version": "1.0.0",
   "description": "Node.js Development Environment",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "development": "nodemon --watch src ./src/index.js",
     "production": "node ./src/index.js",
