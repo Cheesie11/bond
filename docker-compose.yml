@@ -1,40 +1,41 @@
-version: "3.3"
-
+version: "3.7"
 services:
-
-    nodejs:
-        build:
-          context: .
-          dockerfile: ./.docker/Dockerfile
-        restart: unless-stopped
-        user: "node"
-        env_file: ./.env
-        environment:
-          APP_NAME: ${APP_NAME}
-          ENVIRONMENT: ${ENVIRONMENT}
-        stdin_open: true # docker run -i
-        tty: true        # docker run -t
-        depends_on:
-            - postgres
-        ports:
-            - '${NODE_PORT}:${NODE_PORT}'
-        volumes:
-            - ./code:/opt/nodeDEV/code
-
-    postgres:
-        image: postgres:9.6.2-alpine
-        env_file: ./.env
-        restart: unless-stopped
-        environment:
-            POSTGRES_USER: ${DATABASE_USERNAME}
-            POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
-            POSTGRES_DB: ${APP_DATABASE}
-        ports:
-            - '${DATABASE_PORT}:5432'
-
-    adminer:
-        image: adminer
-        env_file: ./.env
-        restart: unless-stopped
-        ports:
-            - '${ADMINER_PORT}:8080'
+  nodejs:
+    build:
+      context: .
+      dockerfile: ./.docker/Dockerfile
+    container_name: "${APP_NAME}_backend"
+    restart: unless-stopped
+    user: "node"
+    env_file: ./.env
+    environment:
+      APP_NAME: ${APP_NAME}
+      ENVIRONMENT: ${ENVIRONMENT}
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    depends_on:
+      - postgres
+    ports:
+      - ${NODE_PORT}:${NODE_PORT}
+    volumes:
+      - ./code:/opt/nodeDEV/code
+      - ./.docker/entrypoint.sh:/opt/nodeDEV/code/entrypoint.sh:ro
+    command: "yarn ${NODE_ENV}"
+  postgres:
+    image: postgres:9.6.2-alpine
+    container_name: "${APP_NAME}_database"
+    env_file: ./.env
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${APP_DATABASE}
+    ports:
+      - ${DATABASE_PORT}:5432
+  adminer:
+    image: adminer
+    container_name: "${APP_NAME}_adminer"
+    env_file: ./.env
+    restart: unless-stopped
+    ports:
+      - ${ADMINER_PORT}:8080
