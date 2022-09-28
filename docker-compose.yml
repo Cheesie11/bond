@@ -10,7 +10,7 @@ services:
     env_file: ./.env
     environment:
       APP_NAME: ${APP_NAME}
-      ENVIRONMENT: ${ENVIRONMENT}
+      ENVIRONMENT: ${NODE_ENV}
     stdin_open: true # docker run -i
     tty: true # docker run -t
     depends_on:
