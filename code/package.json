@@ -1,0 +1,19 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "Node.js Development Environment",
+  "main": "app.js",
+  "scripts": {
+    "development": "nodemon --watch src ./src/index.js",
+    "production": "node ./src/index.js",
+    "lint": "eslint --ext .js --ignore-path .gitignore src",
+    "lint:fix": "yarn lint --fix"
+  },
+  "keywords": [
+    "node.js",
+    "docker",
+    "development"
+  ],
+  "author": "Fabian Dennler",
+  "license": "MIT"
+}
