@@ -3,6 +3,7 @@
 
 ### Features
 
+* Add vscode default settings ([c5ae5ae](https://github.com/foxfabi/nodeDEV/commit/c5ae5ae85772712d3a3d0e1e31a67891c27b5d0c))
 * Add vscode recommended extensions ([ccfa55b](https://github.com/foxfabi/nodeDEV/commit/ccfa55b864caab58c55c50089f69df4ab4a9cea0))
 
 
