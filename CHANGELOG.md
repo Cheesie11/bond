@@ -1,6 +1,20 @@
 #  (2022-09-28)
 
 
+### Features
+
+* Add vscode recommended extensions ([ccfa55b](https://github.com/foxfabi/nodeDEV/commit/ccfa55b864caab58c55c50089f69df4ab4a9cea0))
+
+
+
+## 1.1.1 (2022-09-28)
+
+
+### Bug Fixes
+
+* Change ENVIRONMENT to NODE_ENV ([4d5dd8b](https://github.com/foxfabi/nodeDEV/commit/4d5dd8b4c88b4eef7a54999586749bf4e1a6d80e))
+
+
 
 # 1.1.0 (2022-09-28)
 
