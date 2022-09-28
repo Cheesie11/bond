@@ -1,0 +1,63 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Create Changelog",
+      "type": "shell",
+      "command": "standard-changelog --first-release",
+      "windows": {
+        "command": "standard-changelog --first-release"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Open shell into backend container",
+      "type": "shell",
+      "command": "docker exec -it nodedev_backend /bin/bash",
+      "windows": {
+        "command": "docker exec -it nodedev_backend /bin/bash"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Install npm package into container",
+      "type": "shell",
+      "command": "docker exec -it nodedev_backend yarn add ${input:package}",
+      "windows": {
+        "command": "docker exec -it nodedev_backend yarn add ${input:package}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Show all logs and follow",
+      "type": "shell",
+      "command": "docker-compose logs --follow",
+      "windows": {
+        "command": "docker-compose logs --follow"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
