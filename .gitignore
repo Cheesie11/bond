@@ -19,3 +19,6 @@ node_modules/
 # System Files
 .DS_Store
 Thumbs.db
+
+# Ignore docker entrypoint while linked read-only
+code/entrypoint.sh
