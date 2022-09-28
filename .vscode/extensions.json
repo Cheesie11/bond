@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "ms-azuretools.vscode-docker",
+    "zoellner.openapi-preview",
+    "Arjun.swagger-viewer",
+    "formulahendry.code-runner",
+    "mikestead.dotenv",
+    "redhat.vscode-yaml",
+    "usernamehw.errorlens",
+    "pomber.git-file-history",
+    "mhutchie.git-graph",
+    "michelemelluso.gitignore",
+    "eg2.vscode-npm-script",
+    "humao.rest-client",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "mutantdino.resourcemonitor",
+    "rvest.vs-code-prettier-eslint",
+    "esbenp.prettier-vscode"
+  ]
+}
