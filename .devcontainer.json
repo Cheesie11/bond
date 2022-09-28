@@ -18,7 +18,7 @@
     "editor.tabSize": 2,
     "eslint.run": "onSave",
     "editor.renderWhitespace": "all",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
@@ -38,6 +38,6 @@
     "christian-kohler.path-intellisense",
     "mutantdino.resourcemonitor",
     "rvest.vs-code-prettier-eslint",
-    "esbenp.prettier-vscode",
+    "esbenp.prettier-vscode"
   ]
 }
