@@ -3,6 +3,15 @@
 
 ### Bug Fixes
 
+* Add vscode remote extensionpack ([#2](https://github.com/foxfabi/nodeDEV/issues/2)) ([afc86e8](https://github.com/foxfabi/nodeDEV/commit/afc86e82f96d3e21fefa44608021fa4bde6e6ef2))
+
+
+
+## 1.1.3 (2022-09-29)
+
+
+### Bug Fixes
+
 * Fix npm packages installation ([78da8c4](https://github.com/foxfabi/nodeDEV/commit/78da8c48e9e3a45e070cbdbd185a9b1d10475352))
 
 
