@@ -24,6 +24,7 @@ Note: This node modules are installed globally.
 - [commitizen](https://www.npmjs.com/package/commitizen): fill out any required commit fields at commit time.
 - [standard-changelog](https://www.npmjs.com/package/standard-changelog): opinionated approach to CHANGELOG generation.
 - [eslint](https://www.npmjs.com/package/eslint) a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
+- [db-migrate db-migrate-pg](https://www.npmjs.com/package/db-migrate): Database migration framework for node.js.
 
 ## Installed vscode extensions
 
