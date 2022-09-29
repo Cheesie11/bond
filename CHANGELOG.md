@@ -1,6 +1,11 @@
 #  (2022-09-29)
 
 
+### Bug Fixes
+
+* Fix npm packages installation ([78da8c4](https://github.com/foxfabi/nodeDEV/commit/78da8c48e9e3a45e070cbdbd185a9b1d10475352))
+
+
 ### Features
 
 * Add vscode default settings ([c5ae5ae](https://github.com/foxfabi/nodeDEV/commit/c5ae5ae85772712d3a3d0e1e31a67891c27b5d0c))
