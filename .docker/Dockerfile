@@ -21,7 +21,7 @@ RUN apt-get update &&           \
 RUN npm config set port $NODE_PORT && \
     npm config set unsafe-perm true && \
     npm install -g nodemon \
-    db-migrate db-migrate-pg && \
+    db-migrate db-migrate-pg \
     mocha \
     dotenv \
     commitizen \
