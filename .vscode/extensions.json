@@ -16,6 +16,7 @@
     "christian-kohler.path-intellisense",
     "mutantdino.resourcemonitor",
     "rvest.vs-code-prettier-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "ms-vscode-remote.vscode-remote-extensionpack"
   ]
 }
