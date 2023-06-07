@@ -18,9 +18,9 @@ RUN apt-get update &&           \
     --no-install-recommends &&  \
     apt-get clean &&            \
     rm -rf /var/lib/apt/lists/*
-RUN npm config set port $NODE_PORT && \
-    npm config set unsafe-perm true && \
-    npm install -g nodemon \
+# RUN npm config set port $NODE_PORT && \
+#RUN npm config set unsafe-perm true && \
+RUN npm install -g nodemon \
     db-migrate db-migrate-pg \
     mocha \
     dotenv \

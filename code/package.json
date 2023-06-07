@@ -2,11 +2,11 @@
   "name": "code",
   "version": "1.0.0",
   "description": "Node.js Development Environment",
-  "main": "./src/index.js",
+  "main": "./server.js",
   "scripts": {
-    "development": "nodemon --watch src ./src/index.js",
-    "production": "node ./src/index.js",
-    "lint": "eslint --ext .js --ignore-path .gitignore src",
+    "development": "nodemon --watch . ./server.js",
+    "production": "node ./server.js",
+    "lint": "eslint --ext .js --ignore-path .gitignore .",
     "lint:fix": "yarn lint --fix"
   },
   "keywords": [
@@ -15,5 +15,10 @@
     "development"
   ],
   "author": "Fabian Dennler",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "knex": "^2.4.2",
+    "pg-promise": "^11.5.0"
+  }
 }

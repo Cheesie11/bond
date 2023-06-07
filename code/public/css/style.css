@@ -1,0 +1,181 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+section {
+    padding: 8rem 7%;
+  }
+
+.navigation{
+    position: fixed;
+    top: 20px; 
+    left: 10px; 
+    right: 10px; 
+    width: calc(100% - 20px);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 0;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 1;
+}
+
+.navigation ul{
+    display: flex;
+    width: fit-content;
+    margin-right: auto;
+    list-style-type: none;
+}
+
+.navigation ul li{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    list-style-type: none;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 85px;
+    font-size: 1.5em;
+    transition: 0.5s;
+    text-align: center;
+    color: #cce2e3;
+}
+
+.navigation ul li a:hover .icon{
+    color: rgba(255, 255, 255, 1);
+}
+
+.navigation ul li.active a .icon{
+    /*color: #cce2e3;*/
+    color: #006e73;
+    transform: translateY(-8px);
+}
+
+.navigation ul li a .text{
+    position: absolute;
+    font-weight: 600;
+    font-size: 0.6em;
+    color: white;
+    transform: translateY(0px);
+    letter-spacing: 0.2em;
+    opacity: 0;
+    z-index: 10;
+    word-wrap: break-word;
+}
+
+.navigation ul li.active a .text{
+    opacity: 1;
+    transform: translateY(16px);
+}
+
+.indicator{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.indicator:before{
+    content: '';
+    position: absolute;
+    bottom: 14px;
+    width: 80%;
+    height: 16px;
+    /* rgb(125, 146, 141) gleiche Farbe wie unten*/
+    background: #006e73;
+    border-radius: 5px;
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(80px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(80px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(80px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+    transform: translateX(calc(80px * 4));
+}
+
+/* home */
+
+.home {
+    height: 100vh;
+    background-size: cover;
+    background-color: #cce2e3;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+/* end */
+
+/* about */
+
+.about {
+    background-color: #af9a78;
+    transition: transform 0.5s;
+    border-radius: 10px;
+  }
+  
+  .box-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6rem;
+  }
+  
+  .box {
+    flex-basis: 30%;
+    height: 200px;
+    background-color: #fff;
+  }
+  
+  .box1 {
+    background-color: #ff7f50;
+    height: 100px;
+  }
+  
+  .box2 {
+    background-color: #66cdaa;
+    height: 250px;
+  }
+  
+  .box3 {
+    background-color: #ffa07a;
+    height: 150px;
+  }
+  
+  
+  /* end */
