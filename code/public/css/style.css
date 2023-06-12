@@ -289,3 +289,9 @@ h3 {
 .submit-btn:hover {
   background-color: #3b7d81;
 }
+/* end */
+
+.search-bar .button {
+    background-color: transparent;
+    border: none;
+}
