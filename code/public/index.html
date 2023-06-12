@@ -1,80 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito"
+    />
+  </head>
+  <body>
     <div class="navigation">
-        <ul>
-            <li class="list active">
-                <a href="#">
-                    <span class="icon"><i class="fa-solid fa-house"></i></span>
-                    <span class="text">Home</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#">
-                    <span class="icon"><i class="fa-solid fa-book"></i></span>
-                    <span class="text">Library</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#">
-                    <span class="icon"><i class="fa-solid fa-user"></i></span>
-                    <span class="text">Profile</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#">
-                    <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <span class="text">Profile</span>
-                </a>
-            </li>
-            <div class="indicator"></div>
-        </ul>
+      <ul>
+        <li class="list active">
+          <a href="#">
+            <span class="icon"><i class="fa-solid fa-house"></i></span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class="fa-solid fa-book"></i></span>
+            <span class="text">Library</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class="fa-solid fa-user"></i></span>
+            <span class="text">Profile</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></span>
+            <span class="text">Profile</span>
+          </a>
+        </li>
+        <div class="indicator"></div>
+      </ul>
     </div>
 
     <!-- home -->
 
-    <div class="home" id="home" style="background-image: url('start.png');">
-    <p>Enhance Your Workday with a Personal Journal</p>
+    <div class="home" id="home" style="background-image: url('start.png')">
+      <p>Enhance Your Workday with a Personal Journal</p>
     </div>
 
     <!-- end -->
 
-    <!-- about -->
+    <!-- content -->
 
     <section class="about" id="about">
-        <div class="box-container">
-          <div class="box box1"></div>
-          <div class="box box2"></div>
-          <div class="box box3"></div>
+      <div class="box-container">
+        <div class="box box1">
+          <div class="text-content">
+            <h2>Memoirs of the Day</h2>
+            <p>Welcome to Memoirs of the Day! This is the space where you can capture and reflect on your daily experiences. Whether it's a significant event, a personal achievement, or simply a moment that made you smile, this is where you can write about your day and document the memories that matter to you. Take a few moments to reflect, express yourself, and let your thoughts flow onto the digital pages of your journal.</p>
+          </div>
+          <div class="image-container">
+            <img src="img/start.png" alt="Image 1" />
+            <a class="image-button" href="entry.html">Click</a>
+          </div>
         </div>
-      </section>
+        <div class="box box2">
+          <div class="text-content">
+            <h2>Journal Journey</h2>
+            <p>Welcome to Journal Journey! Take a trip down memory lane and embark on a journey through your past entries. Here, you can explore and revisit your thoughts, feelings, and experiences from different days, providing a valuable perspective on your personal growth and life's milestones. Relive cherished moments, gain insights from your past self, and appreciate the journey that has brought you to where you are today. Enjoy the transformative power of self-reflection as you navigate through your journal entries and discover the beautiful tapestry of your life.</p>
+          </div>
+          <div class="image-container">
+            <img src="img/start.png" alt="Image 2" />
+            <a class="image-button" href="#">Click</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- end -->
 
     <script>
-        let list = document.querySelectorAll('.list');
-        function activeLink(){
-            list.forEach((item) =>
-            item.classList.remove('active'));
-            this.classList.add('active');
-        }
-        list.forEach((item) => item.addEventListener('click', activeLink));
+      let list = document.querySelectorAll(".list");
+      function activeLink() {
+        list.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+      }
+      list.forEach((item) => item.addEventListener("click", activeLink));
 
-        window.addEventListener('scroll', function() {
-    let aboutSection = document.getElementById('about');
-    let scrollPosition = window.scrollY;
+      window.addEventListener("scroll", function () {
+        let aboutSection = document.getElementById("about");
+        let scrollPosition = window.scrollY;
 
-    aboutSection.style.transform = 'translateY(-' + scrollPosition * 0.4 + 'px)';
-  });
+        aboutSection.style.transform =
+          "translateY(-" + scrollPosition * 0.4 + "px)";
+      });
     </script>
-</body>
+  </body>
 </html>
