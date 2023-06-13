@@ -56,25 +56,43 @@
       <div class="box-container">
         <div class="box box1">
           <div class="text-content">
-            <h2>Memoirs of the Day   <i class="fa-solid fa-feather"></i></h2>
-            <p>Welcome to Memoirs of the Day! This is the space where you can capture and reflect on your daily experiences. Whether it's a significant event, a personal achievement, or simply a moment that made you smile, this is where you can write about your day and document the memories that matter to you. Take a few moments to reflect, express yourself, and let your thoughts flow onto the digital pages of your journal.</p>
+            <h2>Memoirs of the Day <i class="fa-solid fa-feather"></i></h2>
+            <p>
+              Welcome to Memoirs of the Day! This is the space where you can
+              capture and reflect on your daily experiences. Whether it's a
+              significant event, a personal achievement, or simply a moment that
+              made you smile, this is where you can write about your day and
+              document the memories that matter to you. Take a few moments to
+              reflect, express yourself, and let your thoughts flow onto the
+              digital pages of your journal.
+            </p>
           </div>
           <div class="image-container">
             <a href="entry.html">
-            <img src="img/memoirs2.jpg" alt="Image 1" />
-            <div class="centered-text">CREATE</div>
+              <img src="img/memoirs2.jpg" alt="Image 1" />
+              <div class="centered-text">CREATE</div>
             </a>
           </div>
         </div>
         <div class="box box2">
           <div class="text-content">
-            <h2>Journal Journey   <i class="fa-solid fa-bookmark"></i></h2>
-            <p>Welcome to Journal Journey! Take a trip down memory lane and embark on a journey through your past entries. Here, you can explore and revisit your thoughts, feelings, and experiences from different days, providing a valuable perspective on your personal growth and life's milestones. Relive cherished moments, gain insights from your past self, and appreciate the journey that has brought you to where you are today. Enjoy the transformative power of self-reflection as you navigate through your journal entries and discover the beautiful tapestry of your life.</p>
+            <h2>Journal Journey <i class="fa-solid fa-bookmark"></i></h2>
+            <p>
+              Welcome to Journal Journey! Take a trip down memory lane and
+              embark on a journey through your past entries. Here, you can
+              explore and revisit your thoughts, feelings, and experiences from
+              different days, providing a valuable perspective on your personal
+              growth and life's milestones. Relive cherished moments, gain
+              insights from your past self, and appreciate the journey that has
+              brought you to where you are today. Enjoy the transformative power
+              of self-reflection as you navigate through your journal entries
+              and discover the beautiful tapestry of your life.
+            </p>
           </div>
           <div class="image-container">
             <a href="library.html">
-            <img src="img/library.jpg" alt="Image 2" />
-            <div class="centered-text">EXPLORE</div>
+              <img src="img/library.jpg" alt="Image 2" />
+              <div class="centered-text">EXPLORE</div>
             </a>
           </div>
         </div>
@@ -91,19 +109,25 @@
       }
       list.forEach((item) => item.addEventListener("click", activeLink));
 
-//
+      //
 
-let userIcon = document.getElementById("user-icon");
+      window.addEventListener("scroll", function () {
+        let contentSection = document.getElementById("content");
+        let scrollPosition = window.scrollY;
 
-function handleUserIconClick() {
-  if (confirm("Do you want to log out?")) {
+        contentSection.style.transform =
+          "translateY(-" + scrollPosition * 0.4 + "px)";
+      });
+      //
+      let userIcon = document.getElementById("user-icon");
 
-    window.location.href = "login.html";
-  }
-}
+      function handleUserIconClick() {
+        if (confirm("Do you want to log out?")) {
+          window.location.href = "login.html";
+        }
+      }
 
-userIcon.addEventListener("click", handleUserIconClick);
-
+      userIcon.addEventListener("click", handleUserIconClick);
     </script>
   </body>
 </html>
