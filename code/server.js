@@ -77,6 +77,18 @@ app.post("/login-user", (req, res) => {
 
 const entriesFilePath = path.join(__dirname, "entries.json");
 
+app.get("/get-entries", (req, res) => {
+  try {
+    const entriesData = fs.readFileSync(entriesFilePath);
+    const entries = JSON.parse(entriesData);
+    res.setHeader("Content-Type", "application/json");
+    res.json(entries);
+  } catch (error) {
+    console.error("Error reading entries:", error);
+    res.sendStatus(500);
+  }
+});
+
 app.post("/save-entry", (req, res) => {
   const { title, date, happen, challenges, achievement } = req.body;
 
