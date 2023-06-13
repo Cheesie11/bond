@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="container">
-      <form>
+      <form id="entry-form">
         <div class="form-group full-width">
           <div>
             <label for="title">Title</label>
@@ -26,37 +26,35 @@
           </div>
           <div>
             <label for="date">Date</label>
-            <input
-              type="datetime"
-              id="date"
-              autocomplete="off"
-              required
-              name="date"
-            />
+            <input type="datetime" id="date" autocomplete="off" name="date" />
           </div>
         </div>
 
         <div class="form-group">
           <h3>What happened today?</h3>
-          <textarea autocomplete="off" name="email"></textarea>
+          <textarea id="happen" autocomplete="off" name="happen"></textarea>
         </div>
 
         <div class="form-group">
           <h3>Were there any challenges or difficulties?</h3>
-          <textarea type="text" autocomplete="off" name="challenges"></textarea>
+          <textarea
+            id="challenges"
+            autocomplete="off"
+            name="challenges"
+          ></textarea>
         </div>
 
         <div class="form-group">
           <h3>What have you achieved today?</h3>
           <textarea
-            type="text"
+            id="achievement"
             autocomplete="off"
             name="achievement"
           ></textarea>
         </div>
 
-        <button class="submit-btn">Save</button>
-        <button class="submit-btn">Cancel</button>
+        <button class="submit-btn" type="submit">Save</button>
+        <button class="submit-btn" type="button" onclick="cancelEntry()">Cancel</button>
       </form>
     </div>
 

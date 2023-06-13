@@ -1,4 +1,5 @@
 const express = require("express");
+const fs = require("fs");
 const path = require("path");
 const bodyParser = require("body-parser");
 const knex = require("knex");
@@ -72,6 +73,39 @@ app.post("/login-user", (req, res) => {
         res.json("email or password is incorrect");
       }
     });
+});
+
+const entriesFilePath = path.join(__dirname, "entries.json");
+
+app.post("/save-entry", (req, res) => {
+  const { title, date, happen, challenges, achievement } = req.body;
+
+  const entry = {
+    title,
+    date,
+    happen,
+    challenges,
+    achievement,
+  };
+
+  let entries = [];
+  try {
+    const entriesData = fs.readFileSync(entriesFilePath);
+    entries = JSON.parse(entriesData);
+  } catch (error) {
+    console.error("Error reading entries:", error);
+  }
+
+  entries.push(entry);
+
+  try {
+    fs.writeFileSync(entriesFilePath, JSON.stringify(entries, null, 2));
+    res.setHeader("Content-Type", "application/json");
+    res.json(entry);
+  } catch (error) {
+    console.error("Error saving entry:", error);
+    res.sendStatus(500);
+  }
 });
 
 app.listen(3000, (req, res) => {
