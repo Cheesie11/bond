@@ -39,9 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((response) => response.json())
       .then((data) => {
         console.log("Entry saved:", data);
+        alert("Entry saved");
+        window.location.href = "index.html";
       })
       .catch((error) => {
         console.error("Error saving entry:", error);
       });
   }
+
+  const cancelButton = document.getElementById("cancel");
+  cancelButton.addEventListener("click", cancelEntry);
 });

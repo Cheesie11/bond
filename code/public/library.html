@@ -4,12 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library</title>
-  <link rel="stylesheet" href="css/library.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>Library</h1>
+  <div class="navigation">
+    <ul>
+      <li class="list">
+        <a href="index.html">
+          <span class="icon"><i class="fa-solid fa-house"></i></span>
+          <span class="text">Home</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="library.html">
+          <span class="icon"><i class="fa-solid fa-book"></i></span>
+          <span class="text">Library</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="entry.html" id="user-icon">
+          <span class="icon"><i class="fa-solid fa-pen"></i></span>
+          <span class="text">Write</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#" id="user-icon">
+          <span class="icon"><i class="fa-solid fa-user"></i></span>
+          <span class="text">Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Content -->
+
+  <div class="library-container">
+    <h1>Library<i class="fa-solid fa-magnifying-glass"></i></h1>
     <div id="entry-list"></div>
   </div>
 
