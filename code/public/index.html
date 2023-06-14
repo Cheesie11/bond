@@ -28,15 +28,15 @@
           </a>
         </li>
         <li class="list">
-          <a href="library.html">
-            <span class="icon"><i class="fa-solid fa-book"></i></span>
-            <span class="text">Library</span>
+          <a href="entry.html">
+            <span class="icon"><i class="fa-solid fa-pen"></i></span>
+            <span class="text">Write</span>
           </a>
         </li>
         <li class="list">
-          <a href="entry.html" id="user-icon">
-            <span class="icon"><i class="fa-solid fa-pen"></i></span>
-            <span class="text">Write</span>
+          <a href="library.html">
+            <span class="icon"><i class="fa-solid fa-book"></i></span>
+            <span class="text">Library</span>
           </a>
         </li>
         <li class="list">
@@ -50,7 +50,7 @@
 
     <!-- home -->
 
-    <div class="home" id="home" style="background-image: url('img/start.png')">
+    <div class="home" id="home">
       <p>Enhance Your Workday with a Personal Journal</p>
     </div>
 
@@ -107,13 +107,15 @@
 
     <!-- end -->
 
+    <script src="js/library.js"></script>
     <script>
-      let list = document.querySelectorAll(".list");
-      function activeLink() {
-        list.forEach((item) => item.classList.remove("active"));
-        this.classList.add("active");
-      }
-      list.forEach((item) => item.addEventListener("click", activeLink));
+      window.addEventListener("scroll", function () {
+  let contentSection = document.getElementById("content");
+  let scrollPosition = window.scrollY;
+
+  contentSection.style.transform =
+    "translateY(-" + scrollPosition * 0.4 + "px)";
+});
     </script>
   </body>
 </html>

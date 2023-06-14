@@ -32,3 +32,26 @@ document.addEventListener("DOMContentLoaded", () => {
       entryList.innerHTML = "<p>An error occurred while fetching entries.</p>";
     });
 });
+
+let list = document.querySelectorAll(".list");
+function activeLink() {
+  list.forEach((item) => item.classList.remove("active"));
+  this.classList.add("active");
+}
+list.forEach((item) => item.addEventListener("click", activeLink));
+
+//
+
+let userIcon = document.getElementById("user-icon");
+
+function handleUserIconClick(event) {
+  event.preventDefault();
+
+  console.log("handleUserIconClick called");
+  if (confirm("Do you want to log out?")) {
+    console.log("Redirecting to login.html...");
+    window.location.href = "/login.html";
+  }
+}
+
+userIcon.addEventListener("click", handleUserIconClick);

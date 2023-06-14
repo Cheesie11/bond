@@ -8,6 +8,7 @@ const db = knex({
   client: "pg",
   connection: {
     host: "localhost",
+    server: "postgres",
     user: "admin",
     password: "secret-pwd",
     database: "bond",
@@ -31,6 +32,10 @@ app.get("/login", (req, res) => {
 
 app.get("/register", (req, res) => {
   res.sendFile(path.join(intialPath, "register.html"));
+});
+
+app.get("/library", (req, res) => {
+  res.sendFile(path.join(intialPath, "library.html"));
 });
 
 app.post("/register-user", (req, res) => {

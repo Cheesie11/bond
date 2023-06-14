@@ -67,6 +67,7 @@ section {
 
 .navigation ul li a:hover .icon {
   color: rgba(255, 255, 255, 1);
+  transform: translateY(-8px);
 }
 
 .navigation ul li a .icon:hover {
@@ -101,6 +102,7 @@ section {
 
 /* home */
 .home {
+  background-image: url(../img/start.png);
   height: 100vh;
   background-size: cover;
   background-color: #cce2e3;
@@ -112,6 +114,7 @@ section {
 
 .home p{
   font-size: 25px;
+  margin: 0px 20px;
 }
 /* end */
 
@@ -188,6 +191,7 @@ section {
 /* end */
 
 /* entry */
+
 .container {
   max-width: 800px;
   margin: 100px auto;
