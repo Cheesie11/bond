@@ -1,12 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
   const entryList = document.getElementById("entry-list");
+  const searchInput = document.getElementById("input");
+  const searchIcon = document.getElementById("search-icon");
 
+  //get entries from json file
   fetch("/get-entries")
     .then((response) => response.json())
     .then((data) => {
       if (data.length > 0) {
-        const entriesHTML = data.map((entry) => {
-          return `
+        const entriesHTML = data
+          .map((entry) => {
+            return `
             <div class="entry-box">
               <div class="entry-title">${entry.title}</div>
               <div class="entry-details">
@@ -20,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
             </div>
           `;
-        }).join("");
+          })
+          .join("");
 
         entryList.innerHTML = entriesHTML;
       } else {
@@ -31,27 +36,50 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error fetching entries:", error);
       entryList.innerHTML = "<p>An error occurred while fetching entries.</p>";
     });
+
+  // Search Function
+  searchIcon.addEventListener("click", () => {
+    const searchValue = searchInput.value.trim().toLowerCase();
+    const entryBoxes = document.getElementsByClassName("entry-box");
+
+    Array.from(entryBoxes).forEach((entryBox) => {
+      const entryTitle = entryBox
+        .querySelector(".entry-title")
+        .textContent.toLowerCase();
+      const entryDate = entryBox
+        .querySelector(".entry-details p:first-child")
+        .textContent.toLowerCase();
+
+      if (entryTitle.includes(searchValue) || entryDate.includes(searchValue)) {
+        entryBox.style.display = "block";
+      } else {
+        entryBox.style.display = "none";
+      }
+    });
+  });
 });
 
-let list = document.querySelectorAll(".list");
-function activeLink() {
-  list.forEach((item) => item.classList.remove("active"));
-  this.classList.add("active");
-}
-list.forEach((item) => item.addEventListener("click", activeLink));
-
-//
-
-let userIcon = document.getElementById("user-icon");
-
-function handleUserIconClick(event) {
-  event.preventDefault();
-
-  console.log("handleUserIconClick called");
-  if (confirm("Do you want to log out?")) {
-    console.log("Redirecting to login.html...");
-    window.location.href = "/login.html";
+//Logout / stay logged in
+window.onload = () => {
+  if (!sessionStorage.name) {
+    location.href = "/login";
+  } else {
+    greeting.innerHTML = `Hello ${sessionStorage.name}`;
   }
-}
+};
 
-userIcon.addEventListener("click", handleUserIconClick);
+const logOut = document.getElementById("logout");
+
+logOut.onclick = () => {
+  sessionStorage.clear();
+  location.reload();
+};
+
+//Scroll for index.html
+window.addEventListener("scroll", function () {
+  let contentSection = document.getElementById("content");
+  let scrollPosition = window.scrollY;
+
+  contentSection.style.transform =
+    "translateY(-" + scrollPosition * 0.4 + "px)";
+});
