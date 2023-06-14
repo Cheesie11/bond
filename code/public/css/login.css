@@ -7,7 +7,8 @@ body {
   overflow: hidden;
 }
 
-.login {
+.login,
+.register {
   position: absolute;
   font-family: 'Nunito', sans-serif;
   top: 50%;
