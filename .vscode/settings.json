@@ -11,5 +11,6 @@
   "editor.tabSize": 2,
   "eslint.run": "onSave",
   "editor.renderWhitespace": "all",
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "liveServer.settings.port": 5501
 }

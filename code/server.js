@@ -1,8 +1,13 @@
 const express = require("express");
-const fs = require("fs");
-const path = require("path");
+const session = require("express-session");
 const bodyParser = require("body-parser");
+const path = require("path");
 const knex = require("knex");
+const crypto = require("crypto");
+
+const generateSecretKey = () => {
+  return crypto.randomBytes(32).toString("hex");
+};
 
 const db = knex({
   client: "pg",
@@ -16,6 +21,14 @@ const db = knex({
 });
 
 const app = express();
+
+app.use(
+  session({
+    secret: generateSecretKey(),
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
 let intialPath = path.join(__dirname, "public");
 
@@ -65,7 +78,7 @@ app.post("/register-user", (req, res) => {
 app.post("/login-user", (req, res) => {
   const { email, password } = req.body;
 
-  db.select("name", "email")
+  db.select("id", "name", "email")
     .from("users_info")
     .where({
       email: email,
@@ -73,6 +86,7 @@ app.post("/login-user", (req, res) => {
     })
     .then((data) => {
       if (data.length) {
+        req.session.userId = data[0].id;
         res.json(data[0]);
       } else {
         res.json("email or password is incorrect");
@@ -80,22 +94,14 @@ app.post("/login-user", (req, res) => {
     });
 });
 
-const entriesFilePath = path.join(__dirname, "entries.json");
-
-app.get("/get-entries", (req, res) => {
-  try {
-    const entriesData = fs.readFileSync(entriesFilePath);
-    const entries = JSON.parse(entriesData);
-    res.setHeader("Content-Type", "application/json");
-    res.json(entries);
-  } catch (error) {
-    console.error("Error reading entries:", error);
-    res.sendStatus(500);
-  }
-});
-
 app.post("/save-entry", (req, res) => {
-  const { title, date, happen, challenges, achievement } = req.body;
+  const { title, date, happen, challenges, achievement, userid } = req.body;
+
+  const userId = req.session.userId;
+
+  if (!userId) {
+    return res.sendStatus(401); // Unauthorized
+  }
 
   const entry = {
     title,
@@ -103,28 +109,48 @@ app.post("/save-entry", (req, res) => {
     happen,
     challenges,
     achievement,
+    userid: userId,
   };
 
-  let entries = [];
-  try {
-    const entriesData = fs.readFileSync(entriesFilePath);
-    entries = JSON.parse(entriesData);
-  } catch (error) {
-    console.error("Error reading entries:", error);
-  }
-
-  entries.push(entry);
-
-  try {
-    fs.writeFileSync(entriesFilePath, JSON.stringify(entries, null, 2));
-    res.setHeader("Content-Type", "application/json");
-    res.json(entry);
-  } catch (error) {
-    console.error("Error saving entry:", error);
-    res.sendStatus(500);
-  }
+  db("entries")
+    .insert(entry)
+    .returning("*")
+    .then((data) => {
+      const savedEntry = data[0];
+      res.json(savedEntry);
+    })
+    .catch((error) => {
+      console.error("Error saving entry:", error);
+      res.status(500).json({
+        error: "An error occurred while saving the entry.",
+        details: error.stack,
+      });
+    });
 });
 
-app.listen(3000, (req, res) => {
-  console.log("listening on port 3000......");
+app.get("/get-entries", (req, res) => {
+  const userId = req.session.userId;
+
+  if (!userId) {
+    return res.sendStatus(401); // Unauthorized
+  }
+
+  db.select("*")
+    .from("entries")
+    .where({ userid: userId })
+    .then((entries) => {
+      res.setHeader("Content-Type", "application/json");
+      res.json(entries);
+    })
+    .catch((error) => {
+      console.error("Error fetching entries:", error);
+      res.sendStatus(500);
+    });
+});
+
+const secretKey = generateSecretKey();
+console.log("Secret Key:", secretKey);
+
+app.listen(3000, () => {
+  console.log("Listening on port 3000...");
 });

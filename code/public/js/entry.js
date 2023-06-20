@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const currentDate = new Date()
-    .toLocaleDateString("en-GB")
-    .replace(/\//g, ".");
+    .toISOString()
+    .split("T")[0];
   document.getElementById("date").value = currentDate;
 
   const entryForm = document.getElementById("entry-form");
@@ -11,15 +11,32 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "index.html";
   }
 
+  function getUserId() {
+    const userId = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("userId="))
+      ?.split("=")[1];
+
+    return userId;
+  }
+
   function saveEntry(event) {
     event.preventDefault();
 
     const entryForm = document.getElementById("entry-form");
     const title = document.getElementById("title").value;
-    const date = document.getElementById("date").value;
+    const dateInput = document.getElementById("date");
+    const date = dateInput.value ? dateInput.valueAsDate.toISOString().split("T")[0] : null;
     const happen = document.getElementById("happen").value;
     const challenges = document.getElementById("challenges").value;
     const achievement = document.getElementById("achievement").value;
+
+    if (!date) {
+      alert("Please enter a valid date.");
+      return;
+    }
+
+    const userId = getUserId();
 
     const entryData = {
       title,
@@ -27,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       happen,
       challenges,
       achievement,
+      userId,
     };
 
     fetch("/save-entry", {
