@@ -1,5 +1,10 @@
 # Bond
-This personalized journal web application allows users to record and organize their thoughts, memories, and experiences. The application has a user-friendly interface and provides features such as user registration, entry creation and editing and search.
+This personalized journal web application allows users to record and organize their thoughts, memories, and experiences. 
+The application has a user-friendly interface and has the following features:
+- user registration
+- entry creation
+- editing
+- search
 
 ![Alt Text](https://github.com/Cheesie11/nodeDEV/blob/main/code/public/img/bondgit.png)
 
