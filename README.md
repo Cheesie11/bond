@@ -24,7 +24,7 @@ The application has a user-friendly interface and has the following features:
 - Run: `docker-compose up -d --build`
 - Check if its successfully running on Docker Desktop
 
-**How to access the Webapplication**
+**How to access the Webapplication (requirement: node.js)**
 - Open your Terminal in your Code Editor
 - Switch to the "code" folder with `cd code`
 - Run `node server.js`
