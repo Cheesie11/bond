@@ -30,7 +30,7 @@ The application has a user-friendly interface and has the following features:
 **How to check your Users / Entries**
 - Go to adminer in which all your Data is saved: [`adminer`](http://localhost:8088/)
 - Make sure that your enter the same information, as in the following image:
-- ![Alt Text](https://github.com/Cheesie11/nodeDEV/blob/main/code/public/img/bondgit.png)
+- ![Alt Text](https://github.com/Cheesie11/nodeDEV/blob/main/code/public/img/adminer.png)
 - 
 
 
