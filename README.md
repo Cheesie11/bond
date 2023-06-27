@@ -31,7 +31,7 @@ The application has a user-friendly interface and has the following features:
 - If everything worked you should get a generated Secret Key and the message "Listening on port 3000..."
 - Click the following link to open the Webapplication: [`localhost`](http://localhost:3000/)
 
-**How to check your Users / Entries**
+**Set up your Users / Entries**
 - Go to adminer in which all your Data is saved: [`adminer`](http://localhost:8088/)
 - Make sure that your enter the same information, as in the following image (password: secret-pwd):
  ![](https://github.com/Cheesie11/nodeDEV/blob/main/code/public/img/adminer.png)
@@ -54,5 +54,3 @@ CREATE TABLE entries (
   achievement VARCHAR(255),
   userid INTEGER
 );
-
-
