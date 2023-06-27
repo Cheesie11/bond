@@ -8,14 +8,14 @@ The application has a user-friendly interface and has the following features:
 
 ![Alt Text](https://github.com/Cheesie11/nodeDEV/blob/main/code/public/img/bondgit.png)
 
-## How to get started
+## How to get started 
 
 **Needed Software Applications**
 - Docker Desktop
 - Code Editor (VisualStudioCode)
 
 **How to start the Docker Container**
-- Open the entire Folder in your Code Editor
+- Open the downloaded Repository in your Code Editor
 - Open your Terminal
 - Run: `docker-compose up -d --build`
 - Check if its successfully running on Docker Desktop
