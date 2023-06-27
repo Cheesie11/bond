@@ -7,13 +7,16 @@ Needed Software Applications
 - Code Editor (VisualStudioCode)
 
 How to start the Docker Container
-- Open your Terminal in your Code Editor
+- Open the entire Folder in your Code Editor
+- Open your Terminal
 - Run: `docker-compose up -d --build`
-- Check if its running on Docker Desktop
+- Check if its successfully running on Docker Desktop
 
 How to access the Webapplication
-- Go into the code folder with `cd code`
+- Open your Terminal in your Code Editor
+- Switch to the "code" folder with `cd code`
 - Run `node server.js`
+- If everything worked you should get a generated Secret Key and the message "Listening on port 3000..."
 - [Go on localhost:3000](http://localhost:3000/) with nodemon, eslint, dotenv, mocha, serve, .... for development.
 - [PostgreSQL](https://www.postgresql.org/) Database
 - [Adminer](https://www.adminer.org/) for database management
