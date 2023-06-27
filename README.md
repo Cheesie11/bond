@@ -12,6 +12,8 @@ How to start the Docker Container
 - Check if its running on Docker Desktop
 
 How to access the Webapplication
+- Go into the code folder with `cd code`
+- Run `node server.js`
 - [Go on localhost:3000](http://localhost:3000/) with nodemon, eslint, dotenv, mocha, serve, .... for development.
 - [PostgreSQL](https://www.postgresql.org/) Database
 - [Adminer](https://www.adminer.org/) for database management
