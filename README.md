@@ -1,6 +1,7 @@
 # Bond
 
-What's needed?
+## What's needed?
+
 - Docker Desktop
 - Code Editor (VisualStudioCode)
 
@@ -23,18 +24,6 @@ The Visual Studio Code [Remote - SSH](https://marketplace.visualstudio.com/items
 **The local folder `code` is mapped to `/opt/nodeDEV/code` in the container**
 
 **After cloning this repository you should rename `.env.example` to `.env` and adapt as needed**
-
-## Installed npm modules
-
-Note: This node modules are installed globally.
-
-- [nodemon](https://www.npmjs.com/package/nodemon): a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
-- [mocha](https://www.npmjs.com/package/mocha): Simple, flexible, fun JavaScript test framework for Node.js
-- [dotenv](https://www.npmjs.com/package/dotenv): a module that loads environment variables from a `.env` file into `process.env`.
-- [commitizen](https://www.npmjs.com/package/commitizen): fill out any required commit fields at commit time.
-- [standard-changelog](https://www.npmjs.com/package/standard-changelog): opinionated approach to CHANGELOG generation.
-- [eslint](https://www.npmjs.com/package/eslint) a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
-- [db-migrate db-migrate-pg](https://www.npmjs.com/package/db-migrate): Database migration framework for node.js.
 
 ## Installed vscode extensions
 
