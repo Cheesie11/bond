@@ -1,6 +1,18 @@
-# Node.js Development Environment
+# Bond
+![Alt Text](C:\Users\kaese\OneDrive\Bilder\Screenshots\bond)
+## How to get started
 
-- [Node.js](https://nodejs.org/) with nodemon, eslint, dotenv, mocha, serve, .... for development.
+Needed Software Applications
+- Docker Desktop
+- Code Editor (VisualStudioCode)
+
+How to start the Docker Container
+- Open your Terminal in your Code Editor
+- Run: `docker-compose up -d --build`
+- Check if its running on Docker Desktop
+
+How to access the Webapplication
+- [Go on localhost:3000](http://localhost:3000/) with nodemon, eslint, dotenv, mocha, serve, .... for development.
 - [PostgreSQL](https://www.postgresql.org/) Database
 - [Adminer](https://www.adminer.org/) for database management
 
@@ -13,18 +25,6 @@ The Visual Studio Code [Remote - SSH](https://marketplace.visualstudio.com/items
 **The local folder `code` is mapped to `/opt/nodeDEV/code` in the container**
 
 **After cloning this repository you should rename `.env.example` to `.env` and adapt as needed**
-
-## Installed npm modules
-
-Note: This node modules are installed globally.
-
-- [nodemon](https://www.npmjs.com/package/nodemon): a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
-- [mocha](https://www.npmjs.com/package/mocha): Simple, flexible, fun JavaScript test framework for Node.js
-- [dotenv](https://www.npmjs.com/package/dotenv): a module that loads environment variables from a `.env` file into `process.env`.
-- [commitizen](https://www.npmjs.com/package/commitizen): fill out any required commit fields at commit time.
-- [standard-changelog](https://www.npmjs.com/package/standard-changelog): opinionated approach to CHANGELOG generation.
-- [eslint](https://www.npmjs.com/package/eslint) a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
-- [db-migrate db-migrate-pg](https://www.npmjs.com/package/db-migrate): Database migration framework for node.js.
 
 ## Installed vscode extensions
 
