@@ -1,7 +1,8 @@
 # Bond
 
-## What's needed?
+## How to get started
 
+Needed Software Applications
 - Docker Desktop
 - Code Editor (VisualStudioCode)
 
