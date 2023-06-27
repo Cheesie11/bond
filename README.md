@@ -18,9 +18,6 @@ How to access the Webapplication
 - Run `node server.js`
 - If everything worked you should get a generated Secret Key and the message "Listening on port 3000..."
 - Click the following link to open the Webapplication: [`localhost`](http://localhost:3000/)
-- [Go on localhost:3000](http://localhost:3000/) with nodemon, eslint, dotenv, mocha, serve, .... for development.
-- [PostgreSQL](https://www.postgresql.org/) Database
-- [Adminer](https://www.adminer.org/) for database management
 
 The Visual Studio Code [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension lets you use a Docker container as a full-featured development environment. It allows you to open any folder or repository inside a container and take advantage of Visual Studio Code's full feature set. The [`.devcontainer.json`](./.devcontainer.json) file tells VS Code how to access (or create) the development container with well-defined tool and runtime stack.
 
