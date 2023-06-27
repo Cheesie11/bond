@@ -17,7 +17,7 @@ How to access the Webapplication
 - Switch to the "code" folder with `cd code`
 - Run `node server.js`
 - If everything worked you should get a generated Secret Key and the message "Listening on port 3000..."
-- Click the following link to open the Webapplication: [`localhost`](localhost:3000)
+- Click the following link to open the Webapplication: [`localhost`](http://localhost:3000/)
 - [Go on localhost:3000](http://localhost:3000/) with nodemon, eslint, dotenv, mocha, serve, .... for development.
 - [PostgreSQL](https://www.postgresql.org/) Database
 - [Adminer](https://www.adminer.org/) for database management
