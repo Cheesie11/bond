@@ -8,6 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Nunito", sans-serif;
+  background-color: rgb(236, 244, 245);
 }
 
 section {
@@ -181,9 +182,8 @@ section {
 /* content */
 
 .content {
-  background-color: #4b9093;
+  background-color: rgb(236, 244, 245);
   transition: transform 0.5s;
-  border-radius: 10px;
 }
 
 .box-container {
@@ -194,7 +194,7 @@ section {
 
 .box {
   flex-basis: 100%;
-  background-color: #4b9093;
+  background-color: rgb(236, 244, 245);
   margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
@@ -229,12 +229,12 @@ section {
 }
 
 .box h2 {
-  color: #fff;
+  color: #446c6f;
   margin-bottom: 0.5rem;
 }
 
 .box p {
-  color: #fff;
+  color: #446c6f;
   margin-bottom: 1.5rem;
 }
 
@@ -257,11 +257,12 @@ section {
   max-width: 800px;
   margin: 100px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: rgb(236, 244, 245);
 }
 
 h3 {
   margin-top: 0;
+  color: #446c6f;
 }
 
 .form-group {
@@ -272,6 +273,7 @@ h3 {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  color: #446c6f;
 }
 
 .form-group input[type="text"],
@@ -343,6 +345,7 @@ h3 {
   margin-bottom: 30px;
   justify-content: center;
   align-items: center;
+  color: #446c6f;
 }
 
 .entry-box {
@@ -351,6 +354,7 @@ h3 {
   padding: 10px;
   margin-bottom: 10px;
   cursor: pointer;
+  position: relative; /* Add this line */
 }
 
 .entry-box:hover {
@@ -367,6 +371,24 @@ h3 {
 
 .entry-box.open .entry-details {
   display: block;
+}
+
+/* Edit Button */
+.edit-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #4b9093;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #3b7d81;
 }
 
 /* Search */
@@ -399,7 +421,5 @@ h3 {
 #search-icon:hover {
   background-color: #3b7d81;
 }
-
-/* end */
 
 /* end */

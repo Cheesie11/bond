@@ -132,7 +132,7 @@ app.get("/get-entries", (req, res) => {
   const userId = req.session.userId;
 
   if (!userId) {
-    return res.sendStatus(401); // Unauthorized
+    return res.sendStatus(401);
   }
 
   db.select("*")
@@ -145,6 +145,27 @@ app.get("/get-entries", (req, res) => {
     .catch((error) => {
       console.error("Error fetching entries:", error);
       res.sendStatus(500);
+    });
+});
+
+app.get("/entry", (req, res) => {
+  const entryId = req.query.id;
+  console.log(entryId);
+  db.select("*")
+    .from("entries")
+    .where({ id: entryId })
+    .then((entries) => {
+      if (entries.length > 0) {
+        res.json(entries[0]);
+      } else {
+        res.status(404).json({ error: "Entry not found" });
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching entry:", error);
+      res
+        .status(500)
+        .json({ error: "An error occurred while fetching the entry" });
     });
 });
 

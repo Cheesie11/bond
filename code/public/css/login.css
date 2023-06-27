@@ -10,7 +10,7 @@ body {
 .login,
 .register {
   position: absolute;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -24,7 +24,7 @@ body {
 
 h1,
 h3 {
-  color: #006e73;
+  color: #3b7d81;
 }
 
 .email,
@@ -46,8 +46,8 @@ h3 {
 }
 
 .submit-btn {
-  background-color: #006e73;
-  font-family: 'Nunito', sans-serif;
+  background-color: #3b7d81;
+  font-family: "Nunito", sans-serif;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -58,6 +58,10 @@ h3 {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #6ab7bb;
 }
 
 @media screen and (max-width: 600px) {

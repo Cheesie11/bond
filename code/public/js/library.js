@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   <p>Achievement:</p>
                   <p>${entry.achievement}</p>
                 </div>
+                <button class="edit-button" data-entry-id="${entry.id}">Edit</button>
               </div>
             `;
           })
@@ -31,12 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
         entryList.innerHTML = "<p>No entries found.</p>";
       }
     });
-  //.catch((error) => {
-  //console.error("Error fetching entries:", error);
-  //entryList.innerHTML = "<p>An error occurred while fetching entries.</p>";
-  //});
 
-  // Search Function
+  entryList.addEventListener("click", (event) => {
+    if (event.target.classList.contains("edit-button")) {
+      const entryId = event.target.dataset.entryId;
+      window.location.href = `/entry.html?id=${entryId}`;
+    }
+  });
+
   searchIcon.addEventListener("click", () => {
     const searchValue = searchInput.value.trim().toLowerCase();
     const entryBoxes = document.getElementsByClassName("entry-box");
@@ -62,9 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 window.onload = () => {
   if (!sessionStorage.name) {
     location.href = "/login";
-  } //else {
-  //greeting.innerHTML = `Hello ${sessionStorage.name}`;
-  //}
+  }
 };
 
 const logOut = document.getElementById("logout");
@@ -73,12 +74,3 @@ logOut.onclick = () => {
   sessionStorage.clear();
   location.reload();
 };
-
-// Scroll for index.html
-window.addEventListener("scroll", function () {
-  let contentSection = document.getElementById("content");
-  let scrollPosition = window.scrollY;
-
-  contentSection.style.transform =
-    "translateY(-" + scrollPosition * 0.4 + "px)";
-});

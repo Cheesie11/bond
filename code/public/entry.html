@@ -3,12 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Entry</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Nunito"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet" />
   </head>
   <body>
     <div class="container">
@@ -16,13 +13,7 @@
         <div class="form-group full-width">
           <div>
             <label for="title">Title</label>
-            <input
-              type="text"
-              id="title"
-              autocomplete="off"
-              required
-              name="title"
-            />
+            <input type="text" id="title" autocomplete="off" required name="title" />
           </div>
           <div>
             <label for="date">Date</label>
@@ -37,31 +28,16 @@
 
         <div class="form-group">
           <h3>Were there any challenges or difficulties?</h3>
-          <textarea
-            id="challenges"
-            autocomplete="off"
-            name="challenges"
-          ></textarea>
+          <textarea id="challenges" autocomplete="off" name="challenges"></textarea>
         </div>
 
         <div class="form-group">
           <h3>What have you achieved today?</h3>
-          <textarea
-            id="achievement"
-            autocomplete="off"
-            name="achievement"
-          ></textarea>
+          <textarea id="achievement" autocomplete="off" name="achievement"></textarea>
         </div>
 
         <button class="submit-btn" type="submit">Save</button>
-        <button
-          class="submit-btn"
-          type="button"
-          id="cancel"
-          onclick="cancelEntry()"
-        >
-          Cancel
-        </button>
+        <button class="submit-btn" type="button" id="cancel" onclick="cancelEntry()">Cancel</button>
       </form>
     </div>
 
