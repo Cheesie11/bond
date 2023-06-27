@@ -45,3 +45,15 @@ CREATE TABLE users_info (
   password VARCHAR(255)
 );
 
+```sql
+CREATE TABLE entries (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255),
+  date TIMESTAMP,
+  happen VARCHAR(255),
+  challenges VARCHAR(255),
+  achievement VARCHAR(255),
+  userid INTEGER
+);
+
+
