@@ -30,6 +30,7 @@ The application has a user-friendly interface and has the following features:
 - Run `node server.js`
 - If everything worked you should get a generated Secret Key and the message "Listening on port 3000..."
 - Click the following link to open the Webapplication: [`localhost`](http://localhost:3000/)
+- Currently nothing is working because you don't have your Database correctly set up, we'll do that now
 
 **Set up your Users / Entries**
 - Go to adminer in which all your Data is saved: [`adminer`](http://localhost:8088/)
@@ -54,3 +55,5 @@ CREATE TABLE entries (
   achievement VARCHAR(255),
   userid INTEGER
 );
+
+**Enjoy Bond**
