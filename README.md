@@ -35,7 +35,7 @@ The application has a user-friendly interface and has the following features:
 - Go to adminer in which all your Data is saved: [`adminer`](http://localhost:8088/)
 - Make sure that your enter the same information, as in the following image (password: secret-pwd):
  ![](https://github.com/Cheesie11/nodeDEV/blob/main/code/public/img/adminer.png)
-- Now you can view either the users_info or the entries table.
+- Now you'll have to open the SQL-Commando and paste in the two bottom SQL Codes:
 
 ```sql
 CREATE TABLE users_info (
@@ -45,7 +45,6 @@ CREATE TABLE users_info (
   password VARCHAR(255)
 );
 
-```sql
 CREATE TABLE entries (
   id SERIAL PRIMARY KEY,
   title VARCHAR(255),
