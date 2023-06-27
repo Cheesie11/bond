@@ -36,3 +36,12 @@ The application has a user-friendly interface and has the following features:
 - Make sure that your enter the same information, as in the following image (password: secret-pwd):
  ![](https://github.com/Cheesie11/nodeDEV/blob/main/code/public/img/adminer.png)
 - Now you can view either the users_info or the entries table.
+
+```sql
+CREATE TABLE users_info (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255),
+  email VARCHAR(255),
+  password VARCHAR(255)
+);
+
