@@ -10,9 +10,9 @@ The application has a user-friendly interface and has the following features:
 
 ## How to get started 
 
-**Clone the repository**
+- **Clone the repository**
 
-**After cloning this repository you should rename `.env.example` to `.env` and adapt as needed**
+- **After cloning this repository you should rename `.env.example` to `.env` and adapt as needed**
 
 **Needed Software Applications**
 - Docker Desktop
