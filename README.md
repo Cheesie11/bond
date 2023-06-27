@@ -16,7 +16,7 @@ The application has a user-friendly interface and has the following features:
 
 **How to start the Docker Container**
 - Open the downloaded Repository in your Code Editor
-- Open your Terminal
+- Open your Terminal (in Code Editor)
 - Run: `docker-compose up -d --build`
 - Check if its successfully running on Docker Desktop
 
