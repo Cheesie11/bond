@@ -33,7 +33,7 @@ The application has a user-friendly interface and has the following features:
 - Currently nothing is working because you don't have your Database correctly set up, we'll do that now
 
 **Set up your Users / Entries**
-- Go to adminer in which all your Data is saved: [`adminer`](http://localhost:8088/)
+- Go to adminer in which all your Data will be saved: [`adminer`](http://localhost:8088/)
 - Make sure that your enter the same information, as in the following image (password: secret-pwd):
  ![](https://github.com/Cheesie11/nodeDEV/blob/main/code/public/img/adminer.png)
 - Now you'll have to open the SQL-Commando and paste in the two bottom SQL Codes:
