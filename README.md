@@ -7,7 +7,10 @@ What's needed?
 How to start the Docker Container
 - Open your Terminal in your Code Editor
 - Run: `docker-compose up -d --build`
-- [Node.js](https://nodejs.org/) with nodemon, eslint, dotenv, mocha, serve, .... for development.
+- Check if its running on Docker Desktop
+
+How to access the Webapplication
+- [Go on localhost:3000](http://localhost:3000/) with nodemon, eslint, dotenv, mocha, serve, .... for development.
 - [PostgreSQL](https://www.postgresql.org/) Database
 - [Adminer](https://www.adminer.org/) for database management
 
