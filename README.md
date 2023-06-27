@@ -1,5 +1,5 @@
 # Bond
-In today's digital world, people are looking for a practical and secure way to record their thoughts and memories. Paper-based journals are often unusable, and traditional text editors don't provide the search and organization functionality desired. Creating a web-based journal application that is tailored to user needs can close this gap.
+This personalized journal web application allows users to record and organize their thoughts, memories, and experiences. The application has a user-friendly interface and provides features such as user registration, entry creation and editing and search.
 
 ![Alt Text](https://github.com/Cheesie11/nodeDEV/blob/main/code/public/img/bondgit.png)
 
