@@ -1,25 +1,28 @@
 # Bond
+In today's digital world, people are looking for a practical and secure way to record their thoughts and memories. Paper-based journals are often unusable, and traditional text editors don't provide the search and organization functionality desired. Creating a web-based journal application that is tailored to user needs can close this gap.
+
 ![Alt Text](https://github.com/Cheesie11/nodeDEV/blob/main/code/public/img/bondgit.png)
+
 ## How to get started
 
-Needed Software Applications
+**Needed Software Applications**
 - Docker Desktop
 - Code Editor (VisualStudioCode)
 
-How to start the Docker Container
+**How to start the Docker Container**
 - Open the entire Folder in your Code Editor
 - Open your Terminal
 - Run: `docker-compose up -d --build`
 - Check if its successfully running on Docker Desktop
 
-How to access the Webapplication
+**How to access the Webapplication**
 - Open your Terminal in your Code Editor
 - Switch to the "code" folder with `cd code`
 - Run `node server.js`
 - If everything worked you should get a generated Secret Key and the message "Listening on port 3000..."
 - Click the following link to open the Webapplication: [`localhost`](http://localhost:3000/)
 
-The Visual Studio Code [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension lets you use a Docker container as a full-featured development environment. It allows you to open any folder or repository inside a container and take advantage of Visual Studio Code's full feature set. The [`.devcontainer.json`](./.devcontainer.json) file tells VS Code how to access (or create) the development container with well-defined tool and runtime stack.
+
 
 The Visual Studio Code [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension lets you use any remote machine with a SSH server as your development environment.
 
