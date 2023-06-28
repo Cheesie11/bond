@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   entryForm.addEventListener("submit", saveEntry);
 
   function cancelEntry() {
-    window.location.href = "library.html";
+    window.location.href = "index.html";
   }
 
   function getUserId() {

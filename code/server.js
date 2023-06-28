@@ -100,7 +100,7 @@ app.post("/save-entry", (req, res) => {
   const userId = req.session.userId;
 
   if (!userId) {
-    return res.sendStatus(401); // Unauthorized
+    return res.sendStatus(401);
   }
 
   const entry = {
@@ -168,9 +168,6 @@ app.get("/entry", (req, res) => {
         .json({ error: "An error occurred while fetching the entry" });
     });
 });
-
-const secretKey = generateSecretKey();
-console.log("Secret Key:", secretKey);
 
 app.listen(3000, () => {
   console.log("Listening on port 3000...");
